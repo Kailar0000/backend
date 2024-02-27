@@ -34,7 +34,7 @@ DEBUG = bool(os.environ.get("DEBUG"))
 SESSION_COOKIE_SECURE = True
 CSRF_COOKIE_SECURE = True
 
-ALLOWED_HOSTS = [["127.0.0.1", "dantalian1994.pythonanywhere.com/"]]
+ALLOWED_HOSTS = ["127.0.0.1", "dantalian1994.pythonanywhere.com/"]
 
 
 # Application definition
