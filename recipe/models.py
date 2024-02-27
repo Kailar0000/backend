@@ -37,7 +37,7 @@ class Recipes(models.Model):
         verbose_name_plural = 'Рецепты'
 
     def get_absolute_url(self):
-        return reverse('recipe_page', kwargs={'recipe_pk': self.slug})
+        return reverse('recipe_page', kwargs={'recipe_pk': self.pk})
 
     def __str__(self):
         return self.title
