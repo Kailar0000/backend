@@ -1,0 +1,12 @@
+{% extends 'main.html' %}
+
+{% block content %}
+        <img src={{ recipe.thumbnail.url }} alt={{ recipe.title }} width="250"/>
+        <strong>{{ recipe.title }}</strong>
+        <p>{{ recipe.category }}</p>
+        <p>{{ recipe.author }}</p>
+        <small>{{ recipe.time_create }}</small>
+        <p>{{ recipe.full_description }}</p>
+        <small>{{ recipe.time }}</small>
+        <p>{{ recipe.steps</p>
+{% endblock %}

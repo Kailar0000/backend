@@ -1,0 +1,21 @@
+{% extends 'main.html' %}
+
+{% block content %}
+    {% for article in articles %}
+    <div class="card mb-3">
+        <div class="row">
+            <div class="col-4">
+                <img src="{{ recipe.thumbnail.url }}" class="card-img-top" alt="{{ recipe.title }}">
+            </div>
+            <div class="col-8">
+                <div class="card-body">
+                    <h5 class="card-title"><a href="{{ recipe.get_absolute_url }}">{{ recipe.title }}</a></h5>
+                    <div class="card-subtitle">{{ recipe.author.username }}</div>
+                    <p class="card-text">{{ recipe.short_description }}</p>
+                    <a href="{% url 'articles_by_category' article.category.slug %}" class="btn btn-primary">{{ recipe.category.title }}</a>
+                  </div>
+                </div>
+            </div>
+      </div>
+    {% endfor %}
+{% endblock %}
